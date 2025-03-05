@@ -1,0 +1,42 @@
+.productPage {
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    
+  }
+  h1:hover{
+    text-decoration: underline;
+    color: red;
+  }
+  
+  .boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .box {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .box img {
+   height: 200px;
+   width: 100%;
+    object-fit: cover;
+  }
+  
+  h2, h3 {
+    margin: 10px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

@@ -1,0 +1,134 @@
+
+body {
+  font-family: Arial, sans-serif;
+  
+}
+
+.productGridadd {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.mainContaineradd {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.imgContaineradd {
+  display: flex;
+  justify-content: center;
+}
+
+.mainImgadd img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px ;
+  border: 1px solid black;
+}
+
+.descContaineradd {
+  padding: 10px;
+}
+
+.descContaineradd h1 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.descContaineradd h2 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.descContaineradd h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.descContaineradd h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.quantity-controlsadd {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.quantity-controlsadd button {
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.quantity-controlsadd span {
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.rm-add-cb{
+  display: flex;
+}
+
+.rmbtnadd {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 27px;
+  width: 125px;
+}
+
+.buyadd {
+  background-color:green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 27px;
+  width: 125px;
+  margin-left: 25px;
+}
+
+.checkbox{
+  border: 1px solid black;
+  margin-left: 25px;
+  height: 25px;
+  width: 25px;
+  /* margin-top: 5px; */
+  
+}
+
+
+@media (max-width: 768px) {
+  .productGridadd {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .productGridadd {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
