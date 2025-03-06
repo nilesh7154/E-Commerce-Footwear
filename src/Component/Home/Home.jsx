@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 
 function Home({ showImage }) {
   return (
@@ -35,7 +35,7 @@ function Home({ showImage }) {
           <img src="../Images/img.jpg" alt="Banner" />
         </div>
       )}
-      {/* <Footer/> */}
+    
     </div>
   );
 }
