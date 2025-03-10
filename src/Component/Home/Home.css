@@ -46,16 +46,13 @@
   }
   
   
-  .img img {
-    height: 75vh; 
-    width: 100%;
-    object-fit: cover; 
-  }
+  
   
   
   .home {
     display: flex;
     flex-direction: column; 
+    /* margin-left: 50px; */
   }
   
   
@@ -75,9 +72,7 @@
     }
   
     
-    .img img {
-      height: 50vh; 
-    }
+    
   }
   
   @media screen and (max-width: 480px) {
