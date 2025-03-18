@@ -13,7 +13,9 @@ import Kids from "./Component/Home/Category/Kids";
 import Trending from "./Component/Home/Category/Trending";
 import Addtocart from "./Component/AddCart/Addtocart";
 // import Contact from "./Component/Contact/Contact";
-// import Footer from "./Component/Footer/Footer";
+import Footer from "./Component/Footer/Footer";
+import Navlink from "./Component/Home/Navlink";
+// import Account from "./Component/Account/Account";
 // import FAQ from "./Component/F&Q/F&Q";
 
 function App() {
@@ -34,7 +36,10 @@ function App() {
             <Route path="/sale" element={<Sale />} />
             <Route path="/kids" element={<Kids />} />
             <Route path="/trending" element={<Trending />} />
-            {/* <Route path="/footer" element={<Footer/>}/> */}
+            <Route path="/footer" element={<Footer/>}/>
+            <Route path="/navlink" element={<Navlink/>}/>
+            {/* <Route path="/account" element={<Account/>}/> */}
+            
             {/* <Route path="/faq" element={<FAQ/>}/> */}
           </Routes>
         </ProviderFunction>

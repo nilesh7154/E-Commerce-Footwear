@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Home.css";
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-
 import Slider from "react-slick";
-// import Footer from '../Footer/Footer';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Footer from "../Footer/Footer";
+import "./Home.css";  // Import the Home.css for styling
+import Navlink from "./Navlink";
 
 let carouselData = [
   { id: 1, img: "/Images/img.jpg" },
@@ -15,59 +15,55 @@ let carouselData = [
 ];
 
 function Home({ showImage }) {
-
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet or smaller
+        settings: {
+          slidesToShow: 1, // Keep it single image in the slider even on tablets
+        },
+      },
+      {
+        breakpoint: 640, // Mobile
+        settings: {
+          slidesToShow: 1, // Keep it single image on mobile as well
+        },
+      },
+    ],
   };
 
-  console.log(carouselData,"log");
-  
-
   return (
-    <div className="main" id="Home">
-      <div className="home">
-        <ul className="Categories">
-          <li>
-            <Link to="/sale">Sale</Link>
-          </li>
-          <li>
-            <Link to="/new">New Arrival</Link>
-          </li>
-          <li>
-            <Link to="/men">Men</Link>
-          </li>
-          <li>
-            <Link to="/women">Women</Link>
-          </li>
-          <li>
-            <Link to="/kids">Kids</Link>
-          </li>
-          <li>
-            <Link to="/trending">Trending</Link>
-          </li>
-        </ul>
-      </div>
+    <div className="home-container">
+      {/* Navbar */}
+      <Navlink/>
 
+      {/* Carousel */}
       {showImage && (
-        <div className="w-full max-w-[1400px] mx-auto px-4 ">
+        <div className="carousel-container">
           <Slider {...settings}>
             {carouselData.map((slide) => (
-              <div key={slide.id} className="w-full"  >
-                <img src={slide.img} alt="Banner" className="w-full h-[600px] object-cover rounded-lg"/>
+              <div key={slide.id} className="carousel-slide">
+                <img
+                  src={slide.img}
+                  alt="banner"
+                  className="carousel-img"
+                />
               </div>
             ))}
           </Slider>
-          
         </div>
-        
       )}
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

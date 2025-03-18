@@ -1,0 +1,122 @@
+/* Footer Styles */
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 20px; /* Padding on top/bottom and sides */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center; /* Centered text */
+    max-width: 1400px; /* Max width of the footer */
+    margin: 0 auto; /* Center the footer */
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between; /* Space between sections */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444; /* Light border between sections */
+    margin-bottom: 20px; /* Add margin to separate footer sections */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+  }
+  
+  .footer-section {
+    width: 22%; /* Each section takes up 22% of the available space */
+    margin-bottom: 20px; /* Add margin between sections */
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px; /* Space under heading */
+    font-size: 18px; /* Heading size */
+    text-transform: uppercase; /* Uppercase text */
+  }
+  
+  .footer-section p {
+    margin-bottom: 15px; /* Space between paragraphs */
+    font-size: 14px; /* Smaller text */
+    line-height: 1.5; /* Line spacing */
+  }
+  
+  .social-links,
+  .payment-methods {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center the items */
+  }
+  
+  .social-links li,
+  .payment-methods li {
+    margin-right: 20px; /* Space between icons */
+  }
+  
+  .social-links a,
+  .payment-methods a {
+    color: #fff; /* White icons */
+    font-size: 20px; /* Size of the icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .social-links a:hover,
+  .payment-methods a:hover {
+    color: #ff6347; /* Color on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px; /* Font size of bottom text */
+    color: #ccc; /* Light color for footer bottom text */
+  }
+  
+  .footer-bottom p {
+    margin: 0; /* Remove any default margin */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .footer-top {
+      flex-direction: column; /* Stack sections vertically */
+      text-align: center; /* Center text for smaller screens */
+    }
+  
+    .footer-section {
+      width: 100%; /* Each section takes full width */
+      margin-bottom: 20px; /* Add space between sections */
+    }
+  
+    .social-links,
+    .payment-methods {
+      justify-content: center; /* Center icons on small screens */
+    }
+  
+    .footer-bottom {
+      padding-top: 15px; /* Adjust padding for small screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Mobile Styling */
+    .footer-top {
+      padding: 10px 20px;
+    }
+  
+    .footer-section {
+      width: 100%; /* Each section takes full width */
+      margin-bottom: 20px;
+    }
+  
+    .footer-bottom {
+      font-size: 12px;
+      padding-top: 10px;
+    }
+  
+    .social-links a,
+    .payment-methods a {
+      font-size: 18px; /* Smaller icons for mobile */
+    }
+  
+    .footer-section p {
+      font-size: 12px; /* Smaller text on mobile */
+    }
+  }
+  

@@ -40,7 +40,7 @@
         9,
         10
       ],
-      "addToCart": true
+      "addToCart": false
     },
     {
       "id": 3,
@@ -61,7 +61,7 @@
         9,
         10
       ],
-      "addToCart": false
+      "addToCart": true
     },
     {
       "id": 4,
@@ -188,7 +188,7 @@
         9,
         10
       ],
-      "addToCart": false
+      "addToCart": true
     },
     {
       "id": 10,

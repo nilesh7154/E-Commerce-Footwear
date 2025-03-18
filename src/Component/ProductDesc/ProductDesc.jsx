@@ -27,6 +27,7 @@ const ProductDesc = () => {
   const addToCart = (val) => {
     let newData = { ...val, addToCart: true };
     updateData(val.id, newData);
+    alert("Product added sucessfully in cart.")
   };
 
   const updateData = (id, newData) => {

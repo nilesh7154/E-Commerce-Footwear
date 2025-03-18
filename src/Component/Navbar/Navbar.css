@@ -1,64 +1,68 @@
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: gainsboro;
-  height: 80px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  border: 1px solid black;
-  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1;
-  padding: 10px 50px;
+  z-index: 10;
+  border-bottom: 1px solid black;
 }
 
-.navbar:hover {
-  background-color: gray;
-  transform: translateY(-2px);
-}
-
+/* Logo Area */
 .logo {
   display: flex;
   align-items: center;
 }
 
+/* Search Bar Styling */
 .search-bar {
   position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .search-bar input {
   height: 35px;
   width: 250px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 5px 30px 5px 10px; /* Add padding on the left to make space for the icon */
+ 
   outline: none;
   transition: all 0.3s ease;
 }
 
 .search-bar input::placeholder {
-  color: #aaa;
+  color: black;
 }
 
 .search-bar input:focus {
   transform: scale(1.05);
 }
 
+.search-icon {
+  position: absolute;
+  left: 10px; /* Position the icon inside the search input */
+  color: black; /* Light gray color for the icon */
+  font-size: 20px;
+}
 
+/* Search Box for suggestions */
 .searchBox {
   position: absolute;
-  top: 45px; 
+  top: 45px;
   left: 0;
   width: 100%;
   background-color: white;
   border: 1px solid #ccc;
-  max-height: 300px; 
-  overflow-y: auto; 
+  max-height: 300px;
+  overflow-y: auto;
   z-index: 999;
   padding: 10px;
-  display: none; 
+  display: none;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
@@ -74,29 +78,73 @@
   transform: translateY(-2px);
 }
 
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+  display: none;
+}
+
 .nav-links {
   list-style-type: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-links li {
-  margin-left: 60px;
-  font-size: larger;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .nav-links a {
-  cursor: pointer;
   color: black;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.nav-links a .fa {
+  margin-right: 4px; /* Add space between the icon and the text */
 }
 
 .nav-links a:hover {
-  background-color: gainsboro;
-  color: #fffacd;
-  transform: translateY(-2px);
+ color: brown;
+  text-decoration: underline;
+  transform: translateY(-5px);
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
 }

@@ -1,0 +1,102 @@
+/* Navbar Container */
+.navbar-h {
+    background-color: #ffffff;  /* White background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    border-bottom: 1px solid grey;  /* Light border for separation */
+    transition: all 0.3s ease;  /* Smooth transition for background */
+  }
+  
+  .navbar-h:hover {
+    background-color: #f8f8f8;  /* Slight gray background when hovered */
+  }
+  
+  /* Navbar Links Container */
+  .navbar-h-links {
+    display: flex;
+    justify-content: center;  /* Center the items horizontally */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;  /* Spacing between links */
+  }
+  
+  /* Navbar Link Styling */
+  .navbar-h-link {
+    color: #333333;  /* Dark color for text */
+    font-size: 18px;
+    font-weight: 600;  /* Slightly bolder text */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;  /* Rounded corners for links */
+    position: relative;  /* For adding hover effects */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;  /* Smooth hover effects */
+  }
+  
+  /* Hover Effect for Links */
+  .navbar-h-link:hover {
+    text-decoration: underline;
+    color: red;  /* White text on hover */
+    transform: translateY(-5px);  /* Lift effect */
+  }
+  
+  /* Add a subtle underline animation on hover */
+  .navbar-h-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;  /* White color */
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s, left 0.3s;
+  }
+  
+  .navbar-h-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Mobile and Tablet Responsiveness */
+  @media (max-width: 1024px) {
+    .navbar-h {
+      padding: 15px 20px;  /* Adjust padding for smaller screens */
+    }
+  
+    .navbar-h-links {
+      gap: 20px;  /* Reduced gap between links */
+    }
+  
+    .navbar-h-link {
+      font-size: 16px;  /* Slightly smaller font on tablets */
+      padding: 8px 18px;  /* Reduced padding for better fit */
+    }
+  }
+  
+  /* For Mobile Devices */
+  @media (max-width: 768px) {
+    .navbar-h-links {
+      flex-direction: column;  /* Stack the items vertically */
+      gap: 15px;  /* Smaller gap for vertical stacking */
+      align-items: flex-start;  /* Align to the left */
+    }
+  
+    .navbar-h-link {
+      font-size: 14px;  /* Smaller font size for mobile */
+      padding: 10px 15px;  /* Adjust padding */
+      width: 100%;  /* Make links fill the full width of the screen */
+      text-align: left;  /* Align text to the left */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-h-link {
+      font-size: 12px;  /* Further reduce font size on very small screens */
+      padding: 8px 12px;  /* Further adjust padding for tight screens */
+    }
+  }
+  

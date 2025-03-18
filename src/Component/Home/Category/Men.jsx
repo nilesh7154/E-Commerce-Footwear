@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import createStore from "../../Context/createStore";
-import Home from "../Home";
+import "./Category.css"
+import Navlink from "../Navlink";
+
 
 const Men = () => {
   const [apiData, setApidata] = useState([]);
@@ -30,9 +32,10 @@ const Men = () => {
 
   return (
     <div>
-      <Home />
+      
+      <Navlink/>
       <div className="productPage">
-        <h1>Men's Shoes</h1>
+        <h1 className="head">Men's Shoes</h1>
         <div className="boxContainer">
           {filterData.map((val) => {
             const image = val.img && val.img[0] ? val.img[0] : null;
