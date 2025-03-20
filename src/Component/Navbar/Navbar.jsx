@@ -65,7 +65,7 @@ function Navbar() {
               onChange={(e) => showSearchBoxHandler(e)}
             />
             {/* Search Icon */}
-            <FontAwesomeIcon icon={faSearch} className="search-icon" />
+              <FontAwesomeIcon icon={faSearch} className="search-icon" />
             <div
               className="searchBox"
               ref={searchBoxRef}

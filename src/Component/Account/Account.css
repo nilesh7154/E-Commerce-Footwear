@@ -1,1 +1,129 @@
-
+/* src/Account.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .account-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .account-container:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .account-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-switch {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .tab-btn.active {
+    background-color: #0056b3;
+  }
+  
+  .account-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .account-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .account-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .account-container input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .account-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .account-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .success-msg {
+    color: green;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .err {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .account-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .tab-btn {
+      font-size: 14px;
+    }
+  
+    .account-container h2 {
+      font-size: 1.5em;
+    }
+  
+    .account-container input {
+      font-size: 14px;
+    }
+  
+    .account-container button {
+      font-size: 14px;
+    }
+  }

@@ -11,8 +11,17 @@ let carouselData = [
   { id: 1, img: "/Images/img.jpg" },
   { id: 2, img: "/Images/img1.jpg" },
   { id: 3, img: "/Images/img2.jpg" },
-  { id: 4, img: "/Images/img.jpg" },
+  { id: 4, img: "/Images/img3.jpg" },
 ];
+
+let sdata=[
+  { id: 1, img: "/Images/shoe.jpg" },
+  { id: 2, img: "/Images/shoe1.jpg" },
+  { id: 3, img: "/Images/shoe2.jpg" },
+  { id: 4, img: "/Images/shoe3.jpg" },
+  { id: 4, img: "/Images/shoe4.jpg" },
+
+]
 
 function Home({ showImage }) {
   const settings = {
@@ -59,6 +68,12 @@ function Home({ showImage }) {
               </div>
             ))}
           </Slider>
+          <div className='h-auto bg-slate-600'>
+
+            <div className="h-[400px] w-3/4 m-auto border pt-10 mt-4"></div>
+
+
+          </div>
         </div>
       )}
 
