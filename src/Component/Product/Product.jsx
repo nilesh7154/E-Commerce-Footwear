@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 import createStore from "../Context/createStore";
 import FetchApi from "../CustomHook/useFetchApi";
+import Footer from "../Footer/Footer";
 
 const Product = () => {
   let [apiData, setApidata] = useState([]);
@@ -59,6 +60,7 @@ const Product = () => {
           );
         })}
       </div>
+      <Footer/>
     </div>
   );
 };

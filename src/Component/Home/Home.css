@@ -29,6 +29,12 @@
   .carousel-slide img:hover {
     transform: scale(1.05);
   }
+
+  .cardslide{
+    height: 400px;
+    width: 100%;
+    background-color: aqua;
+  }
   
   /* Responsive Design */
   @media (max-width: 768px) {

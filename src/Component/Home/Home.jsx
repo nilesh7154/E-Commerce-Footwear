@@ -68,9 +68,11 @@ function Home({ showImage }) {
               </div>
             ))}
           </Slider>
-          <div className='h-auto bg-slate-600'>
+          <div className="cardslide">
 
-            <div className="h-[400px] w-3/4 m-auto border pt-10 mt-4"></div>
+            <div className="cardimg">
+              
+            </div>
 
 
           </div>
